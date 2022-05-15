@@ -227,7 +227,7 @@ function get_reddit_comments(retries) {
     comments.innerHTML =
         '<h3 style="text-align:center"><div class="loading"><i class="icon ion-ios-refresh"></i></div></h3>';
 
-    var url = '/api/v1/comments/' + video_data.id +
+    var url = 'https://invidious.weblibre.org/api/v1/comments/' + video_data.id +
         '?source=reddit&format=html' +
         '&hl=' + video_data.preferences.locale;
     var xhr = new XMLHttpRequest();
@@ -310,7 +310,7 @@ function get_youtube_comments(retries) {
     comments.innerHTML =
         '<h3 style="text-align:center"><div class="loading"><i class="icon ion-ios-refresh"></i></div></h3>';
 
-    var url = '/api/v1/comments/' + video_data.id +
+    var url = 'https://invidious.weblibre.org/api/v1/comments/' + video_data.id +
         '?format=html' +
         '&hl=' + video_data.preferences.locale +
         '&thin_mode=' + video_data.preferences.thin_mode;
@@ -386,7 +386,7 @@ function get_youtube_replies(target, load_more, load_replies) {
     body.innerHTML =
         '<h3 style="text-align:center"><div class="loading"><i class="icon ion-ios-refresh"></i></div></h3>';
 
-    var url = '/api/v1/comments/' + video_data.id +
+    var url = 'https://invidious.weblibre.org/api/v1/comments/' + video_data.id +
         '?format=html' +
         '&hl=' + video_data.preferences.locale +
         '&thin_mode=' + video_data.preferences.thin_mode +
